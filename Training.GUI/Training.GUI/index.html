@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css">
+
+</head>
+<body>
+    <section>
+        Users: <div data-bind="text: users().length" class="label"></div>
+        <ul data-bind="foreach: users">
+            <li>
+                <span data-bind="text: name"></span>
+                <input data-bind="value: name"></input>
+            </li>
+        </ul>
+        <input data-bind="value: addingUserName"/>
+        <button data-bind="click: addNewUser">Add new user</button>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+    <script src="UserViewModel.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
