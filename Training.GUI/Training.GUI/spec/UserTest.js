@@ -1,8 +1,11 @@
 ﻿describe('userViewModelTest', function () {
     it('Add user to list', function () {
-        var userViewModel = UserViewModel();
-        userViewModel.addingUserName("Test user");
-        userViewModel.addNewUser();
+        //even
+        var sut = UserViewModel();
+        //when
+        sut.addingUserName("Test user");
+        
+        //then
         expect(userViewModel.users().length).toBe(3);
     });
     it('New Instance should have 2 items on the list', function () {
